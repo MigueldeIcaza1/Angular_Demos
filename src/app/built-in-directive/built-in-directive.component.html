@@ -1,0 +1,9 @@
+<div class="mx-3">
+    <h6>Built In Directives</h6>
+
+    <button class="btn btn-primary" (click)="toggleDisplay()">Display Details</button>
+    <p *ngIf="canShow">Secret Password = tuna</p>
+    <div class="col-3" *ngFor="let count of countList">
+        <div [ngClass]="{'bg-primary text-white': count >= 5}">{{count}}</div>
+    </div>
+</div>

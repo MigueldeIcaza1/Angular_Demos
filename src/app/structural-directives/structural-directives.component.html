@@ -1,0 +1,10 @@
+<div class="mx-3">
+    <h6>Structural Directives</h6>
+
+    <button class="btn btn-primary mb-2" (click)="display()">Only Show odd numbers</button>
+    <div *ngIf="canShow" class="col-3">
+        <ul class="list-group" *ngFor="let number of numbersList">
+            <li class="list-group-item" *ngIf="number%2 !=0">{{number}}</li>
+        </ul>
+    </div>
+</div>

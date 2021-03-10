@@ -1,0 +1,24 @@
+<div class="mx-3 col-4">
+
+    <h6>DI And Services</h6>
+    <div>
+        <b>Active Users</b>
+        <ul class="list-group" *ngFor="let user of usersList | userFilter: true">
+            <li class="list-group-item  p-1 pl-3">
+                {{user.Name}} |
+                <button class="btn btn-link" (click)="toggleState(user.Id)">Set to InActive</button>
+            </li>
+        </ul>
+    </div>
+
+    <div>
+        <b>Inactive Users</b>
+        <ul class="list-group" *ngFor="let user of usersList  | userFilter: false">
+            <li class="list-group-item p-1 pl-3">
+                {{user.Name}} |
+                <button class="btn btn-link" (click)="toggleState(user.Id)">Set to Active</button>
+            </li>
+        </ul>
+    </div>
+
+</div>

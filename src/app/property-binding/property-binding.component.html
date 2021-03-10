@@ -1,0 +1,7 @@
+<div class="mx-3">
+<h6>Property Binding</h6>
+
+<input type="text" class="form-control col-3 pb-1" [(ngModel)]="username" name="username" required />
+<div>{{username}}</div>
+<button class="btn btn-primary" [disabled]="!username" (click)="resetUser()">Reset User</button>
+</div>
